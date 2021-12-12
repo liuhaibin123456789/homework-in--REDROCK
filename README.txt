@@ -13,8 +13,9 @@ CREATE TABLE `message`(
     `p_id` INT  DEFAULT 0, #默认为零表示，不是评论，表示最顶一级的留言，评论的p_id指向表示对应id的留言。
     `c_id` INT DEFAULT 0, #标签评论的唯一性
     `user_name` VARCHAR(20),
-    `content` VARCHAR(255)
+    `content` VARCHAR(255)#表示评论或留言的内容
 )CHARSET=utf8;
+#留言和评论放在一张表上
 DROP TABLE `message`;
 
 CREATE TABLE `user`(
